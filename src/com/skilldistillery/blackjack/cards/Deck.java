@@ -1,8 +1,12 @@
 package com.skilldistillery.blackjack.cards;
 
+
 import java.util.ArrayList;
 import java.util.Collections;
+
 import java.util.List;
+
+
 
 public class Deck {
 	private List<Card> cards;
@@ -29,8 +33,24 @@ public class Deck {
 		Collections.shuffle(cards);
 	}
 	
-	public Card deakCard() {
+	public Card dealCard() {
 		return cards.remove(0);
 	}
+	
+	public void InitialDealingToDealer() {
+		 Deck deck = new Deck();
+	    List<Card> hand = new ArrayList<>(2);
+	      int totalValue = 0;
+	      for(int i = 0; i < 2; i++) {
+	        Card c = deck.dealCard();
+	        totalValue += c.getValue();
+	        hand.add(c);
+	        
+	        System.out.println(totalValue);
+	      }
+		
+	}
+	
+//	+ remove Card
 	
 }
