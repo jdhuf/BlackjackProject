@@ -1,14 +1,33 @@
 package com.skilldistillery.blackjack.participants;
+import com.skilldistillery.blackjack.cards.Deck;
 
-public class Dealer {
-//this guy deals a hand
-	// this guy has a hand
-	// this guy makes a decision based on the hand
-	public static void getHandfromDealer() {
+
+public class Dealer extends Player {
 		
+	private Deck deck;
+
+	
+	public Dealer () {
+		this.deck = new Deck();
 	}
 	
-	public static void dealerMakesDecision() {
-		
+	
+	Dealer (Deck deck) {
+		this.deck = new Deck();
 	}
+
+	public void dealerShufflesDeck() {
+		deck.shuffle();
+	}
+
+	public void dealerDealsCard(Player player) {
+		deck.dealCard();
+	}
+	// doesn't show first (one) card
+
+	public String dealerShowsOneCard() {
+			
+		return "Dealer is showing this card: " + playerHand.getCards().get(1);
+	}
+
 }

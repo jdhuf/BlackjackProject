@@ -1,15 +1,40 @@
 package com.skilldistillery.blackjack.participants;
+import com.skilldistillery.blackjack.cards.Card;
+import com.skilldistillery.blackjack.turns.BlackjackHand;
 
 public class Player {
-	//this guy asks for number of cards
-	//this guy receives cards (hand of cards based on number of cards asked for)
-	//this guy decides if he wants more cards based on initial hand
-	public static void getHandFromDealer() {
+	
+	
+	
+	public BlackjackHand playerHand = new BlackjackHand();
+	
+	public Player () {
+		playerHand = new BlackjackHand();
+	}
+
+	
+	public BlackjackHand getPlayerHand() {
+		return playerHand;
+	}
+
+	public void setPlayerHand(BlackjackHand playerHand) {
+		this.playerHand = playerHand;
+	}
+
+	public void addCardToPlayerHand(Card c) {
+		playerHand.addCard(c);
+		
 		
 	}
-	
-	public static void playerMakesDecision() {
+
+	public void showHand() {
 		
+		
+		System.out.println("Your hand: " + playerHand.toString() + playerHand.getHandValue());
 	}
-	
+
+	public void clear() {
+		playerHand.clear();
+	}
+
 }
