@@ -2,14 +2,29 @@ package com.skilldistillery.blackjack.turns;
 
 public class BlackjackHand extends Hand {
 	
-	+ BlackjackHand() 
 	
-	+ getHandValue(): int
 	
-	+ isBlackJack(): boolean
 	
-	+isBust() : boolean
+//	+ getHandValue(): int
+	
+	public static void isBlackJack() {
+		//boolean
+	}
+	
+	
+	public static void isBust() {
+		//boolean
+	}
+
 	
 	
 
+
+
+	@Override
+	public void getHandValue() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

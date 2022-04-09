@@ -1,15 +1,29 @@
 package com.skilldistillery.blackjack.turns;
 
-public abstract class Hand {
-	
-	+ Hand()
-	
-	+ addCard( card : Card): void
-	
-	+ clear() void
-	
-	+ getHandValue(): int // abstract
-	
-	+ toString (): String
+import java.util.List;
 
+import com.skilldistillery.blackjack.cards.Card;
+
+public abstract class Hand {
+
+	List<Card> cards;
+
+
+
+	public void addCard() {
+
+		for (Card card : cards) {
+
+		}
+
+	}
+
+	public void clear() {
+
+	}
+
+	public abstract void getHandValue(); // int
+
+	//to String
+	
 }
