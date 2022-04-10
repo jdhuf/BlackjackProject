@@ -1,5 +1,5 @@
 package com.skilldistillery.blackjack.participants;
-import com.skilldistillery.blackjack.cards.Card;
+
 import com.skilldistillery.blackjack.turns.BlackjackHand;
 
 public class Player {
@@ -21,10 +21,15 @@ public class Player {
 		this.playerHand = playerHand;
 	}
 
-	public void addCardToPlayerHand(Card c) {
-		playerHand.addCard(c);
-		
-		
+////	public BlackjackHand addCard(Card c) {
+////		playerHand.addCard(c) = new Card();
+////		return player;
+//		
+//		
+//	}
+	
+	public void addCard() {
+		System.out.println("New card added: " + playerHand.addCard());
 	}
 
 	public void showHand() {

@@ -1,5 +1,8 @@
 package com.skilldistillery.blackjack;
+import java.util.List;
 import java.util.Scanner;
+
+import com.skilldistillery.blackjack.cards.Card;
 import com.skilldistillery.blackjack.participants.Dealer;
 import com.skilldistillery.blackjack.participants.Player;
 
@@ -13,7 +16,7 @@ public class BlackJackApplication {
 	public void run() {
 
 
-		
+		List<Card> hand;
 		Dealer dealer = new Dealer();
 		Player player = new Player();
 		
@@ -27,7 +30,7 @@ public class BlackJackApplication {
 		
 		
 		
-		dealer.addCardToPlayerHand(null);
+		dealer.addCard();
 		
 		
 	}

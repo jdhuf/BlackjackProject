@@ -23,7 +23,6 @@ public class Dealer extends Player {
 	public void dealerDealsCard(Player player) {
 		deck.dealCard();
 	}
-	// doesn't show first (one) card
 
 	public String dealerShowsOneCard() {
 			
