@@ -1,10 +1,11 @@
 package com.skilldistillery.blackjack.participants;
+
 import com.skilldistillery.blackjack.cards.Deck;
 
 
 public class Dealer extends Player {
 		
-	private Deck deck;
+	private Deck deck = new Deck();
 
 	
 	public Dealer () {

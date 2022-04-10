@@ -29,12 +29,14 @@ public class Player {
 //	}
 	
 	public void addCard() {
-		System.out.println("New card added: " + playerHand.addCard());
+		//playerHand.addCard();
+		System.out.println("New card added.");
 	}
 
 	public void showHand() {
 		
 		
+	
 		System.out.println("Your hand: " + playerHand.toString() + playerHand.getHandValue());
 	}
 

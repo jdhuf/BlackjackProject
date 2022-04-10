@@ -16,7 +16,7 @@ public class BlackJackApplication {
 	public void run() {
 
 
-		List<Card> hand;
+		//List<Card> hand;
 		Dealer dealer = new Dealer();
 		Player player = new Player();
 		
@@ -27,10 +27,14 @@ public class BlackJackApplication {
 
 		
 		dealer.dealerDealsCard(player);
-		
-		
-		
+		player.addCard();
+		player.showHand();
 		dealer.addCard();
+		player.getPlayerHand();
+		player.getPlayerHand().addCard();
+		player.playerHand.addCard();
+		player.getPlayerHand().toString();
+		player.playerHand.getHandValue();
 		
 		
 	}
