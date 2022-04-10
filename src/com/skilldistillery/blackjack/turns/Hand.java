@@ -1,18 +1,18 @@
 package com.skilldistillery.blackjack.turns;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import com.skilldistillery.blackjack.cards.Card;
 
 
 public abstract class Hand {
-	List<Card> hand = new ArrayList<>();
+	protected List<Card> hand;
 
 
-	public void addCard() {
-		for (Card card : hand)
-			this.hand.add(card);
-			System.out.println("addCard from Hand class");
+	public void addCard(Card card) {
+	
+			hand.add(card);
+			
 
 	}
 
@@ -30,18 +30,14 @@ public abstract class Hand {
 
 	public abstract int getHandValue();
 
-	public List<Card> getCards() {
-		return this.hand;
-	}
-//
-//	public void setCards(List<Card> hand) {
-//		this.hand = hand;
-//	}
-
-	// to String
 	@Override
 	public String toString() {
-		return "Hand [hand=" + this.getHandValue() + "]";
+		return "Hand [hand=" + hand + ", getHand()=" + getHand() + ", getHandValue()=" + getHandValue() + "]";
 	}
+
+
+
+
+	
 
 }

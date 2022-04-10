@@ -1,20 +1,23 @@
 package com.skilldistillery.blackjack.participants;
 
 import com.skilldistillery.blackjack.turns.BlackjackHand;
+import com.skilldistillery.blackjack.turns.Hand;
 
 public class Player {
 	
+	protected Hand playerHand;
 	
-	
-	public BlackjackHand playerHand = new BlackjackHand();
+
 	
 	public Player () {
-		playerHand = new BlackjackHand();
+	
+		this.playerHand = new BlackjackHand();
+		
 	}
 
 	
 	public BlackjackHand getPlayerHand() {
-		return playerHand;
+		return (BlackjackHand) playerHand;
 	}
 
 	public void setPlayerHand(BlackjackHand playerHand) {

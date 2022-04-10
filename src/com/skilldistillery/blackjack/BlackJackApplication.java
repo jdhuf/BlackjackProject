@@ -25,16 +25,12 @@ public class BlackJackApplication {
 		dealer.dealerShufflesDeck();
 		
 
-		
-		dealer.dealerDealsCard(player);
-		player.addCard();
-		player.showHand();
+		dealer.dealerDealsCard(dealer);
 		dealer.addCard();
-		player.getPlayerHand();
-		player.getPlayerHand().addCard();
-		player.playerHand.addCard();
-		player.getPlayerHand().toString();
-		player.playerHand.getHandValue();
+
+		dealer.dealerShowsOneCard();
+
+		
 		
 		
 	}
