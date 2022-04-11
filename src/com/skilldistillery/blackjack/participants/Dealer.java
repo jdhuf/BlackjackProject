@@ -1,11 +1,14 @@
 package com.skilldistillery.blackjack.participants;
 
+import com.skilldistillery.blackjack.cards.Card;
 import com.skilldistillery.blackjack.cards.Deck;
 import com.skilldistillery.blackjack.turns.BlackjackHand;
+import com.skilldistillery.blackjack.turns.Hand;
 
 public class Dealer extends Player {
 
 	private Deck deck;
+	private Card card;
 
 	public Dealer() {
 
@@ -25,15 +28,16 @@ public class Dealer extends Player {
 		this.deck.dealCard();
 	}
 
-	public String dealerShowsOneCard() {
-
-		return "Dealer is showing this card: " + playerHand.getHand().get(1);
+	public Hand dealerShowsOneCard() {
+		System.out.println();
+		return getPlayerHand().get(1);
+		//+ .getHand().get(1);
 	}
 
-	public int getPlayerHandValue() {
-		int value = this.playerHand.getHandValue();
-		return value;
-
-	}
+////	public int getPlayerHandValue() {
+////		int value = this.playerHand.getHandValue();
+////		return value;
+//
+//	}
 
 }

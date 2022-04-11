@@ -6,6 +6,7 @@ import com.skilldistillery.blackjack.turns.Hand;
 
 public class Player {
 
+	Card card;
 	protected Hand playerHand;
 
 	public Player() {
@@ -14,11 +15,6 @@ public class Player {
 
 	}
 
-////	public BlackjackHand getPlayerHand() {
-////		return this;
-////		//return (BlackjackHand) this.getPlayerHand();
-//	
-//	}
 
 	public void setPlayerHand(BlackjackHand playerHand) {
 		this.playerHand = playerHand;
@@ -29,6 +25,26 @@ public class Player {
 		System.out.println("New card added.");
 	}
 
+	
+
+	public Card getCard() {
+		return this.card;
+	}
+
+
+	public void setCard(Card card) {
+		this.card = card;
+	}
+
+
+	public Hand getPlayerHand() {
+		return this.playerHand;
+	}
+
+
+	public void setPlayerHand(Hand playerHand) {
+		this.playerHand = playerHand;
+	}
 
 
 	public void showHand() {
@@ -42,8 +58,8 @@ public class Player {
 
 	public int getPlayerHandValue() {
 		int value = this.playerHand.getHandValue();
+		System.out.println(value);
 		return value;
-
 	}
 
 }

@@ -1,10 +1,13 @@
 package com.skilldistillery.blackjack.turns;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.skilldistillery.blackjack.cards.Card;
 
 public class BlackjackHand extends Hand {
+	
+	List<Card> hand = new ArrayList<>();
 
 	public boolean isBlackJack() {
 
@@ -40,5 +43,7 @@ public class BlackjackHand extends Hand {
 		return handValue;
 
 	}
+
+	
 
 }

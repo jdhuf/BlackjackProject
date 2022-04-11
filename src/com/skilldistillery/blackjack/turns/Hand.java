@@ -5,25 +5,24 @@ import java.util.List;
 import com.skilldistillery.blackjack.cards.Card;
 
 public abstract class Hand {
-	protected List<Card> hand = new ArrayList<Card>();
-	
-	public Hand (){
-		
+	protected List<Card> hand;
+	protected Card card;
+
+	public Hand() {
+
 	}
 
 	public void addCardToHand(Card card) {
 
-		this.hand.add(card);
+		// hand.add(card);
 
 	}
-
 
 	public void clear() {
 		this.hand.removeAll(hand);
 	}
 
 	public abstract int getHandValue();
-
 
 	public List<Card> getHand() {
 		return hand;
@@ -33,11 +32,17 @@ public abstract class Hand {
 		this.hand = hand;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Hand [hand=" + hand + "]";
 	}
+
+	public Hand get(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 
 
