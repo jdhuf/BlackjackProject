@@ -9,13 +9,19 @@ public abstract class Hand {
 	protected Card card;
 
 	public Hand() {
-
+		hand = new ArrayList<>();
 	}
 
 	public void addCardToHand(Card card) {
 
-		// hand.add(card);
+		this.hand.add(card);
 
+	}
+	
+	public void printHand () {
+		for (Card card : hand) {
+			System.out.println(card);
+		}
 	}
 
 	public void clear() {
@@ -25,7 +31,7 @@ public abstract class Hand {
 	public abstract int getHandValue();
 
 	public List<Card> getHand() {
-		return hand;
+		return this.hand;
 	}
 
 	public void setHand(List<Card> hand) {
@@ -34,16 +40,15 @@ public abstract class Hand {
 
 	@Override
 	public String toString() {
-		return "Hand [hand=" + hand + "]";
+		
+		// instantiate Stringbuilder add card and spacing broken needs to be finished
+		
+		StringBuilder sb = new StringBuilder();
+		for (Card card : hand) {
+		sb.append(card + " card ");
+
+		}
+		return sb.toString();
 	}
-
-	public Hand get(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-
-
 
 }

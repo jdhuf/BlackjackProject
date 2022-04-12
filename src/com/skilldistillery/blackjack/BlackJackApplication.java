@@ -36,36 +36,15 @@ public class BlackJackApplication {
 		dealer.dealerShufflesDeck();
 		
 		dealer.dealerDealsCard(dealer);
-		
-		dealer.addCardtoPlayerHand(card);
-		
-		dealer.dealerShowsOneCard();
-		
-		player.getPlayerHandValue();
-		
-		dealer.getPlayerHandValue();
-		
-		dealer.dealerShufflesDeck();
-		
-		dealer.dealerDealsCard(dealer);
-		
-		dealer.addCardtoPlayerHand(card);
-		
-		player.getPlayerHandValue();
-		
-		dealer.getPlayerHandValue();
-		
 		dealer.dealerDealsCard(player);
 		
-		dealer.dealerDealsCard(player);
+		dealer.getPlayerHandValue();
+		player.getPlayerHandValue();
 		
-		player.getPlayerHand();
 		
-		System.out.println("I do not have a working program. \n"
-				+ "I could have copied code from the dozens of examples that are out there, \n"
-				+ "but I would like to understand what I am doing. Please help me!");
-		//player.getPlayerHand().addCardToHand(card);
-		//player.showHand();
+		
+		player.printHand();
+		
 
 	}
 

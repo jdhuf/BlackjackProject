@@ -1,13 +1,16 @@
 package com.skilldistillery.blackjack.participants;
 
+import java.util.List;
+
 import com.skilldistillery.blackjack.cards.Card;
 import com.skilldistillery.blackjack.turns.BlackjackHand;
 import com.skilldistillery.blackjack.turns.Hand;
 
 public class Player {
 
-	Card card;
+
 	protected Hand playerHand;
+	 List<Card> hand;
 
 	public Player() {
 
@@ -26,15 +29,15 @@ public class Player {
 	}
 
 	
-
-	public Card getCard() {
-		return this.card;
+	public void printHand() {
+		playerHand.printHand();
 	}
 
 
-	public void setCard(Card card) {
-		this.card = card;
+	public void toStringHand() {
+		playerHand.toString();
 	}
+
 
 
 	public Hand getPlayerHand() {
@@ -53,7 +56,7 @@ public class Player {
 	}
 
 	public void clear() {
-		playerHand.clear();
+		this.hand.clear();
 	}
 
 	public int getPlayerHandValue() {
