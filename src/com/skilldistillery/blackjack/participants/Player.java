@@ -48,6 +48,8 @@ public class Player {
 	public void setPlayerHand(Hand playerHand) {
 		this.playerHand = playerHand;
 	}
+	
+	
 
 
 	public void showHand() {
@@ -63,6 +65,22 @@ public class Player {
 		int value = this.playerHand.getHandValue();
 		System.out.println(value);
 		return value;
+	}
+//Stuff I'm adding	
+	
+
+
+	public boolean checkPlayerHandIsBust( ) {
+		boolean playerHandValueIsBust = this.playerHand.isBust();
+		System.out.println(playerHandValueIsBust);
+		return playerHandValueIsBust;
+		
+	}
+	
+	public boolean checkPlayerHandIsBlackJack() {
+		boolean playerHandValueIsBlackJack = this.playerHand.isBlackJack();
+		System.out.println(playerHandValueIsBlackJack);
+		return playerHandValueIsBlackJack;
 	}
 
 }

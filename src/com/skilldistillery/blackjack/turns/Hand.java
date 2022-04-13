@@ -29,6 +29,10 @@ public abstract class Hand {
 	}
 
 	public abstract int getHandValue();
+	
+	public abstract boolean isBust();
+	
+	public abstract boolean isBlackJack();
 
 	public List<Card> getHand() {
 		return this.hand;

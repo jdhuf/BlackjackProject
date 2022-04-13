@@ -1,6 +1,6 @@
 package com.skilldistillery.blackjack;
 
-import java.util.List;
+
 import java.util.Scanner;
 
 import com.skilldistillery.blackjack.cards.Card;
@@ -35,14 +35,34 @@ public class BlackJackApplication {
 
 		dealer.dealerShufflesDeck();
 		
-		dealer.dealerDealsCard(dealer);
+//		dealer.dealerDealsCard(dealer);
+//		dealer.dealerDealsCard(player);
+		
+	//	dealer.getPlayerHandValue();
+	//	player.getPlayerHandValue();
+		
 		dealer.dealerDealsCard(player);
-		
-		dealer.getPlayerHandValue();
 		player.getPlayerHandValue();
+		player.checkPlayerHandIsBust();
+		player.checkPlayerHandIsBlackJack();
+		player.printHand();
 		
+		dealer.dealerDealsCard(player);
+		player.getPlayerHandValue();
+		player.checkPlayerHandIsBust();
+		player.checkPlayerHandIsBlackJack();
+		player.printHand();
 		
+		dealer.dealerDealsCard(player);
+		player.getPlayerHandValue();
+		player.checkPlayerHandIsBust();
+		player.checkPlayerHandIsBlackJack();
+		player.printHand();
 		
+		dealer.dealerDealsCard(player);
+		player.getPlayerHandValue();
+		player.checkPlayerHandIsBust();
+		player.checkPlayerHandIsBlackJack();
 		player.printHand();
 		
 
@@ -52,7 +72,7 @@ public class BlackJackApplication {
 
 		System.out.println("Welcome to Blackjack!");
 		System.out.println();
-		System.out.println("Please B to begin or Q to quit. ");
+		System.out.println("Please press B to begin or Q to quit. ");
 
 		String input = sc.nextLine();
 
@@ -66,5 +86,7 @@ public class BlackJackApplication {
 		}
 		//sc.close();
 	}
+	
+
 
 }
