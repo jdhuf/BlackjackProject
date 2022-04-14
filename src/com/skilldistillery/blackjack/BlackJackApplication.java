@@ -38,29 +38,14 @@ public class BlackJackApplication {
 		// dealer.getPlayerHandValue();
 		// player.getPlayerHandValue();
 
-		dealer.dealerDealsCard(player);
-		player.getPlayerHandValue();
-		player.checkPlayerHandIsBust();
-		player.checkPlayerHandIsBlackJack();
-		player.printHand();
+//		dealer.dealerDealsCard(player);
+//		player.getPlayerHandValue();
+//		player.checkPlayerHandIsBust();
+//		player.checkPlayerHandIsBlackJack();
+//		player.printHand();
 
-		dealer.dealerDealsCard(player);
-		player.getPlayerHandValue();
-		player.checkPlayerHandIsBust();
-		player.checkPlayerHandIsBlackJack();
-		player.printHand();
-
-		dealer.dealerDealsCard(player);
-		player.getPlayerHandValue();
-		player.checkPlayerHandIsBust();
-		player.checkPlayerHandIsBlackJack();
-		player.printHand();
-
-		dealer.dealerDealsCard(player);
-		player.getPlayerHandValue();
-		player.checkPlayerHandIsBust();
-		player.checkPlayerHandIsBlackJack();
-		player.printHand();
+		initialDeal();
+		testForWinnerFirstDeal();
 
 	}
 
@@ -83,46 +68,62 @@ public class BlackJackApplication {
 		// sc.close();
 	}
 
+	public void initialDeal() {
+		dealer.dealerDealsCard(player);
+		dealer.dealerDealsCard(player);
+		dealer.dealerDealsCard(dealer);
+		dealer.dealerDealsCard(dealer);
+	}
+
 	public void dealerMakesDecision() {
 
 		if (dealer.getPlayerHandValue() < 17) {
 			dealer.dealerDealsCard(dealer);
 			System.out.println("Dealer decides to hit.");
 		}
-		
+
 		else {
 			System.out.println("Dealer decides to stay.");
 		}
 
 	}
 
-	public void testForWinner() {
+	public void testForWinnerFirstDeal() {
 
-		while (true) {
-
-			if (player.checkPlayerHandIsBlackJack()) {
-				System.out.println("Player wins.");
-				continue;
-			}
-
-			if (dealer.checkPlayerHandIsBlackJack()) {
-				System.out.println("Dealer wins.");
-
-				continue;
-			}
-
-			if (player.checkPlayerHandIsBust()) {
-				System.out.println("Dealer wins.");
-				continue;
-			}
-
-			if (dealer.checkPlayerHandIsBust()) {
-				System.out.println("Player wins.");
-				break;
-			}
+		if (player.checkPlayerHandIsBlackJack()) {
+			System.out.println("Player hand is Blackjack. Player wins.");
 
 		}
 
-		// if (dealer.getPlayerHandValue(dealer) > player.getPlayerHandValue(player) &&
+		else if (dealer.checkPlayerHandIsBlackJack()) {
+			System.out.println("Dealer hand is Blackjack. Dealer wins.");
+
+		}
+
+		if (player.checkPlayerHandIsBust()) {
+			System.out.println("Player hand is Bust. Dealer wins.");
+
+		}
+
+		if (dealer.checkPlayerHandIsBust()) {
+			System.out.println("Dealer hand is Bust. Player wins.");
+
+		}
+
 	}
+
+	public void testForWinnerSecondDealAndBeyond() {
+
+		if (player.checkPlayerHandIsBust()) {
+			System.out.println("Player hand is Bust. Dealer wins.");
+
+		}
+
+		if (dealer.checkPlayerHandIsBust()) {
+			System.out.println("Dealer hand is Bust. Player wins.");
+
+		}
+	}
+
+	// if (dealer.getPlayerHandValue(dealer) > player.getPlayerHandValue(player) &&
 }
