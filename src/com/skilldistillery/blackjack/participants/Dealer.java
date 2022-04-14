@@ -27,6 +27,8 @@ public class Dealer extends Player {
 	
 		player.addCardtoPlayerHand(deck.dealCard());
 	}
+	
+
 
 
 
