@@ -25,7 +25,7 @@ public class Player {
 
 	public void addCardtoPlayerHand(Card card) {
 		this.playerHand.addCardToHand(card);
-		System.out.println("New card added.");
+//		System.out.println("New card added: " + playerHand);
 	}
 
 	
@@ -63,7 +63,7 @@ public class Player {
 
 	public int getPlayerHandValue() {
 		int value = this.playerHand.getHandValue();
-		System.out.println(value);
+	//	System.out.println(value);
 		return value;
 	}
 //Stuff I'm adding	
@@ -72,15 +72,21 @@ public class Player {
 
 	public boolean checkPlayerHandIsBust( ) {
 		boolean playerHandValueIsBust = this.playerHand.isBust();
-		System.out.println(playerHandValueIsBust);
+	//	System.out.println(playerHandValueIsBust);
 		return playerHandValueIsBust;
 		
 	}
 	
 	public boolean checkPlayerHandIsBlackJack() {
 		boolean playerHandValueIsBlackJack = this.playerHand.isBlackJack();
-		System.out.println(playerHandValueIsBlackJack);
+	//	System.out.println(playerHandValueIsBlackJack);
 		return playerHandValueIsBlackJack;
+	}
+	
+	
+	
+	public void showSecondCard(Card card) {
+		System.out.println(this.playerHand.getHand().get(1));
 	}
 
 }

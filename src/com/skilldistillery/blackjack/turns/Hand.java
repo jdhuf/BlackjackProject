@@ -49,7 +49,7 @@ public abstract class Hand {
 		
 		StringBuilder sb = new StringBuilder();
 		for (Card card : hand) {
-		sb.append(card + " card ");
+		sb.append(card + " ");
 
 		}
 		return sb.toString();

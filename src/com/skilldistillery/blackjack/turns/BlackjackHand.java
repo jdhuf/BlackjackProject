@@ -44,6 +44,10 @@ public class BlackjackHand extends Hand {
 
 	}
 	
+	//stuff I'm adding
+	
+	
+	
 		
 	
 
