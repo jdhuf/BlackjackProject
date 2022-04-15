@@ -23,9 +23,15 @@ public abstract class Hand {
 			System.out.println(card);
 		}
 	}
+	
+
 
 	public void clear() {
 		this.hand.removeAll(hand);
+	}
+	
+	public Card showLastCardDealt() {
+		return this.card;
 	}
 
 	public abstract int getHandValue();

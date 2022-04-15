@@ -28,8 +28,11 @@ public class BlackjackHand extends Hand {
 		for (Card card : hand) {
 			handValue += card.getValue();
 		}
-
-		return handValue > 21;
+		if (handValue > 21) {
+			
+		}
+		
+		return true;
 
 	}
 
@@ -40,12 +43,12 @@ public class BlackjackHand extends Hand {
 			handValue += card.getValue();
 		}
 
+	//	System.out.println(handValue);
 		return handValue;
-
 	}
 	
 	//stuff I'm adding
-	
+
 	
 	
 		

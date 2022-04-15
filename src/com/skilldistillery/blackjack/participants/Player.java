@@ -1,5 +1,6 @@
 package com.skilldistillery.blackjack.participants;
 
+import java.util.Iterator;
 import java.util.List;
 
 import com.skilldistillery.blackjack.cards.Card;
@@ -25,6 +26,7 @@ public class Player {
 
 	public void addCardtoPlayerHand(Card card) {
 		this.playerHand.addCardToHand(card);
+		
 //		System.out.println("New card added: " + playerHand);
 	}
 
@@ -77,6 +79,13 @@ public class Player {
 		
 	}
 	
+	public boolean checkDealerHandIsBust( ) {
+		boolean dealerHandValueIsBust = this.playerHand.isBust();
+	//	System.out.println(playerHandValueIsBust);
+		return dealerHandValueIsBust;
+		
+	}
+	
 	public boolean checkPlayerHandIsBlackJack() {
 		boolean playerHandValueIsBlackJack = this.playerHand.isBlackJack();
 	//	System.out.println(playerHandValueIsBlackJack);
@@ -84,6 +93,17 @@ public class Player {
 	}
 	
 	
+	public void showLastCardDealt(Card card) {
+		
+		
+			
+			
+			System.out.println(this.playerHand.getHand().get((hand.size()-1)));
+		
+		
+		
+		
+	}
 	
 	public void showSecondCard(Card card) {
 		System.out.println(this.playerHand.getHand().get(1));
