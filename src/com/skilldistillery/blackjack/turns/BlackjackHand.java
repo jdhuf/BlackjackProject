@@ -43,15 +43,7 @@ public class BlackjackHand extends Hand {
 			handValue += card.getValue();
 		}
 
-	//	System.out.println(handValue);
 		return handValue;
 	}
 	
-	//stuff I'm adding
-
-	
-	
-		
-	
-
 }
