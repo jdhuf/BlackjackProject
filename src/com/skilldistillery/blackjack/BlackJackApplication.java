@@ -29,9 +29,11 @@ public class BlackJackApplication {
 		displayInitialMenu();
 
 		playBlackJack();
+		
+		displayHands();
 
 	}
-
+	
 	public void displayInitialMenu() {
 
 		System.out.println("Welcome to Blackjack!");
@@ -47,7 +49,18 @@ public class BlackJackApplication {
 		}
 
 	}
-
+	
+	public void displayHands() {
+		
+		System.out.println("Your hand:");
+		System.out.println();
+		player.printHand();
+		
+		System.out.println();
+		System.out.println("Dealer's hand:");
+		dealer.printHand();
+		
+	}
 
 	public void playBlackJack() {
 
@@ -67,24 +80,33 @@ public class BlackJackApplication {
 		System.out.println("Dealer's visible card: ");
 		dealer.showSecondCard(card);
 		System.out.println();
-
-		// test for winner
+				
 		if (player.checkPlayerHandIsBlackJack()) {
 			System.out.println("Player hand is Blackjack. You win!");
-
+			System.out.println();
+		
 		}
 
 		if (dealer.checkPlayerHandIsBlackJack()) {
 			System.out.println("Dealer hand is Blackjack. Dealer wins!");
+			System.out.println();
 		}
-
-		System.out.println("Hit or stay?");
-		System.out.println();
-		System.out.println("Press 1 to hit or 2 to stay.");
-		int input = sc.nextInt();
-		sc.nextLine();
-
-		for (int i = 0; input == 1; i++) {
+		
+		int input = 2;
+		
+		do {
+			
+			while(true) {
+						
+			System.out.println("Hit or stay?");
+			System.out.println();
+			System.out.println("Press 1 to hit or 2 to stay.");
+					
+			int userInput = sc.nextInt();
+			sc.nextLine();
+			
+			if (userInput == 1) {
+			
 			System.out.println("You decide to hit.");
 			System.out.println();
 
@@ -93,74 +115,92 @@ public class BlackJackApplication {
 			player.printHand();
 			System.out.println();
 
-			System.out.println("Hit again?");
-
-			System.out.println();
-			System.out.println("Press 1 to hit or 2 to stay.");
-
-			int input1 = sc.nextInt();
-			sc.nextLine();
-			if (input != input1) {
-				input = 2;
+			continue;
+			
 			}
-		}
+			
+			if (userInput == 2) {
+				
+				System.out.println("You decide to stay: ");
 
-		dealer.dealerDealsCard(player);
-		System.out.println("Your hand: ");
-		player.printHand();
-		System.out.println();
+				System.out.println();
+				
+				break;
+			}
+			
+		} 
+		
+	} 
+		
+		while (input != 2);
+						
+		for (int i = 0; i < 10; i++) {
 
-		System.out.println("Hit again?");
-		System.out.println();
-
-		System.out.println("Press 1 to hit, 2 to stay.");
-		System.out.println();
-
-		System.out.println("You decide to stay.");
-
-		if (dealer.getPlayerHandValue() < 17) {
+		 if (dealer.getPlayerHandValue() < 17) {
 
 			dealer.dealerDealsCard(dealer);
-
+			
 			System.out.println("Dealer hits.");
 
-		}
-
-		if (dealer.getPlayerHandValue() > 21) {
-
-			System.out.println("Dealer busts.");
-
-		}
-
-		if ((player.getPlayerHandValue() > dealer.getPlayerHandValue()) && (player.getPlayerHandValue() < 22)) {
-
-			System.out.println("You win!");
-		}
-
-		if (player.getPlayerHandValue() == dealer.getPlayerHandValue()) {
-
-			System.out.println("No winner. Restart to try again.");
-
-		}
-
-		if ((player.getPlayerHandValue() < dealer.getPlayerHandValue()) && (dealer.getPlayerHandValue() < 22)) {
-
-			System.out.println("Dealer wins!");
-
-		}
-
-		if (player.getPlayerHandValue() > 21) {
-
-			System.out.println("You bust!");
-
-		}
-
-		System.out.println();
-		System.out.println("Your hand: ");
-		player.printHand();
-		System.out.println();
-		System.out.println("Dealer's hand: ");
-		dealer.printHand();
+			System.out.println();
+			
+			continue;
+		 	
+		 }
 
 	}
+		
+		if ((player.getPlayerHandValue() > 21) && (dealer.getPlayerHandValue()) > 21) {
+
+			System.out.println("No winner. Everyone's busted. Restart to try again.");
+			
+			System.out.println();
+		
+		}
+		
+		
+		
+		else if (dealer.getPlayerHandValue() > 21) {
+		
+		System.out.println("Dealer busts. You win!");
+		
+		System.out.println();
+				
+	}
+
+	else if ((player.getPlayerHandValue() > dealer.getPlayerHandValue()) && (player.getPlayerHandValue() < 22)) {
+
+			System.out.println("You win!");
+			
+			System.out.println();
+		}
+
+		else if (player.getPlayerHandValue() == dealer.getPlayerHandValue()) {
+
+			System.out.println("No winner. Restart to try again.");
+			
+			System.out.println();
+
+		}
+
+		else if ((player.getPlayerHandValue() < dealer.getPlayerHandValue()) && (dealer.getPlayerHandValue() < 22)) {
+
+			System.out.println("Dealer wins!");
+			
+			System.out.println();
+
+		}
+
+		else 	if (player.getPlayerHandValue() > 21) {
+
+			System.out.println("You bust! Dealer wins.");
+			
+			System.out.println();
+
+		}
+		
+	}
+
 }
+	
+

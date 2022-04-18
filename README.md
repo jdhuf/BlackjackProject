@@ -20,6 +20,6 @@ The purpose of this project is to create a Blackjack card game simulator. The pr
 
 This project was challenging for me for two reasons: one, I have never played Blackjack before; two, I am still in the process acquiring basic object-oriented programming skills and knowledge. 
 
-I have achieved working code for this project, but there are a lot of improvements that could be made. This project will probably be one that I will revisit in the future as I gain more experience and knowledge. A big challenge for me at the moment is properly using objects and methods that I have created throughout their associated classes. I also struggled for a bit on this project trying to make a "while" loop work in my main method without causing errors. I finally gave up and substituted a "for" loop.
+I have achieved working code for this project, but there are a lot of improvements that could be made. This project will probably be one that I will revisit in the future as I gain more experience and knowledge. A big challenge for me at the moment is properly using objects and methods that I have created throughout their associated classes. I also struggled for a bit on this project trying to make a "while" loop work in my playBlackJack method without causing errors. 
 
 
