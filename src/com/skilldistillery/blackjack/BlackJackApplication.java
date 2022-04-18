@@ -84,13 +84,15 @@ public class BlackJackApplication {
 		if (player.checkPlayerHandIsBlackJack()) {
 			System.out.println("Player hand is Blackjack. You win!");
 			System.out.println();
-		
+			
 		}
 
 		if (dealer.checkPlayerHandIsBlackJack()) {
 			System.out.println("Dealer hand is Blackjack. Dealer wins!");
 			System.out.println();
 		}
+		
+		else {
 		
 		int input = 2;
 		
@@ -203,4 +205,4 @@ public class BlackJackApplication {
 
 }
 	
-
+}
