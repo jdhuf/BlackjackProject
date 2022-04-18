@@ -22,4 +22,6 @@ This project was challenging for me for two reasons: one, I have never played Bl
 
 I have achieved working code for this project, but there are a lot of improvements that could be made. This project will probably be one that I will revisit in the future as I gain more experience and knowledge. A big challenge for me at the moment is properly using objects and methods that I have created throughout their associated classes. I also struggled for a bit on this project trying to make a "while" loop work in my playBlackJack method without causing errors. 
 
+## Class Structure Used
 
+I divided the project into four packages: one package for the app to run the program; one package for the Card and Deck classes, with Rank and Suit functioning in the package as enum for the Card class; one package for participants, with the Dealer class being an extension of the Player class; and one package for turns (hands), with the BlackjackHand class extending the Hand class.
